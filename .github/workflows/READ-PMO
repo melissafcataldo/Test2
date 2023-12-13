@@ -1,0 +1,28 @@
+/*
+This is a graphviz-produced layout of the network between R9 READ and R9 PMO.
+
+Each position in the graph is labeled with its position title and GS level. Color-coded icons represent the different divisions and the shade difference represents supervisory vs. non-supervisory employees.
+
+...
+
+dot -Tgif -Goverlap=prism -o READ.gif READ.dot
+
+
+from Melissa Cataldo
+*/
+digraph READ {
+	size="36,36";
+	node [color = grey, style = filled];    
+	node [fontname = "Verdana", size = "30,30"];
+	graph [ fontname = "Arial",
+	  fontsize = 36,
+          style = "bold",
+          label = "\nRegion 9 Public Buildings Service\nReal Estate Acquisition Division\n",
+	  ssize = "30,60" ];
+N1 [label="Regional Commissioner" id="node1" shape = box, style = filled, color = lightblue];
+N2 [label="Deputy Regional Commissioner, Operations" id="node2" color = lightblue];
+N3 [label= "Deputy Regional Commissioner, Programs" id="node3" color = lightblue];
+N1 -> N2 [color = black, arrowhead = normal];
+N1 -> N3 [color = black, arrowhead = normal];
+N4 [label="9PR Director" id="node4" color = green2];
+N3 -> N4 [color = , arrowhead = normal]
